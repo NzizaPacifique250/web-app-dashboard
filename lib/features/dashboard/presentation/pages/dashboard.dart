@@ -162,8 +162,8 @@ class _DashboardState extends State<Dashboard> {
                                               child: Column(
                                                 children: [
                                                   const Padding(
-                                                    padding:
-                                                        EdgeInsets.all(10.0),
+                                                    padding: EdgeInsets.only(
+                                                        top: 15.0),
                                                     child: Text(
                                                       'Statistics - Pie Chart',
                                                       style: TextStyle(
@@ -175,6 +175,53 @@ class _DashboardState extends State<Dashboard> {
                                                   const Divider(),
                                                   Expanded(
                                                       child: PieChartSample1()),
+                                                  Padding(
+                                                    padding: const EdgeInsets
+                                                        .symmetric(
+                                                        vertical: 20.0,
+                                                        horizontal: 35),
+                                                    child: Row(
+                                                      children: [
+                                                        Row(
+                                                          children: [
+                                                            Container(
+                                                              width: 10,
+                                                              height: 10,
+                                                              decoration: BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                  color: Colors
+                                                                      .orangeAccent),
+                                                            ),
+                                                            SizedBox(
+                                                              width: 5,
+                                                            ),
+                                                            Text('Female')
+                                                          ],
+                                                        ),
+                                                        SizedBox(
+                                                          width: 15,
+                                                        ),
+                                                        Row(
+                                                          children: [
+                                                            Container(
+                                                              width: 10,
+                                                              height: 10,
+                                                              decoration: BoxDecoration(
+                                                                  shape: BoxShape
+                                                                      .circle,
+                                                                  color: Colors
+                                                                      .purpleAccent),
+                                                            ),
+                                                            SizedBox(
+                                                              width: 5,
+                                                            ),
+                                                            Text('Male')
+                                                          ],
+                                                        )
+                                                      ],
+                                                    ),
+                                                  ),
                                                 ],
                                               ),
                                             ),

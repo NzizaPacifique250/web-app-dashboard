@@ -5,36 +5,24 @@ class PieChartSample1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PieChart(
+      swapAnimationDuration: Duration(milliseconds: 750),
       PieChartData(
         sections: [
           PieChartSectionData(
-            value: 20,
-            color: Colors.blue,
-            title: 'Jan',
+            showTitle: false,
+            radius: 10,
+            value: 200,
+            color: Colors.purpleAccent,
           ),
           PieChartSectionData(
+            showTitle: false,
+            radius: 10,
             value: 30,
-            color: Colors.green,
-            title: 'Feb',
-          ),
-          PieChartSectionData(
-            value: 25,
-            color: Colors.orange,
-            title: 'Mar',
-          ),
-          PieChartSectionData(
-            value: 15,
-            color: Colors.red,
-            title: 'Apr',
-          ),
-          PieChartSectionData(
-            value: 10,
-            color: Colors.purple,
-            title: 'May',
+            color: Colors.orangeAccent,
           ),
         ],
         sectionsSpace: 0,
-        centerSpaceRadius: 50,
+        centerSpaceRadius: 80,
         borderData: FlBorderData(
           show: false,
         ),
