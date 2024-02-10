@@ -19,7 +19,7 @@ class TopCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
-      var width = sizingInformation.screenSize.width;
+      // var width = sizingInformation.screenSize.width;
       var height = sizingInformation.screenSize.height;
       return SizedBox(
         width: 330,

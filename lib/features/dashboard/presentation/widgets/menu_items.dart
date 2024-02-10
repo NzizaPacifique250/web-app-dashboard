@@ -40,7 +40,7 @@ class _MenuItemsState extends State<MenuItems> {
                     selectedTileColor: Colors.blue,
                     iconColor: Colors.white,
                     leading: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Icon(
                         menuItems[i]['icon'],
                         color: Colors.grey,
@@ -53,7 +53,7 @@ class _MenuItemsState extends State<MenuItems> {
             },
           ),
         ),
-        SizedBox(height: 16),
+        const SizedBox(height: 16),
         Divider(
           color: Colors.grey.withOpacity(0.2),
         ),
@@ -73,7 +73,7 @@ class _MenuItemsState extends State<MenuItems> {
                     selectedTileColor: Colors.blue,
                     iconColor: Colors.white,
                     leading: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       child: Icon(
                         moreMenuItems[i]['icon'],
                         color: Colors.grey,

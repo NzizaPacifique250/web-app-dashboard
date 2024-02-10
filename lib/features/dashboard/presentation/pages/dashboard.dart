@@ -1,10 +1,10 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:template/features/dashboard/presentation/widgets/pie_chart.dart';
 
 import '../widgets/bar_chart.dart';
 import '../widgets/header.dart';
+import '../widgets/line_chart_2.dart';
 import '../widgets/top_card.dart';
 import '../widgets/menu_items.dart';
 
@@ -215,7 +215,7 @@ class _DashboardState extends State<Dashboard> {
                                                     ],
                                                   ),
                                                   const Divider(),
-                                                  const Expanded(
+                                                  Expanded(
                                                       child: BarChartSample()),
                                                 ],
                                               ),
@@ -250,7 +250,7 @@ class _DashboardState extends State<Dashboard> {
                                                     ),
                                                   ),
                                                   const Divider(),
-                                                  Expanded(
+                                                  const Expanded(
                                                       child: PieChartSample()),
                                                   Padding(
                                                     padding: const EdgeInsets
@@ -396,7 +396,9 @@ class _DashboardState extends State<Dashboard> {
                                                   ),
                                                   const Divider(),
                                                   const Expanded(
-                                                      child: BarChartSample()),
+                                                      child: LineChartSample2(
+                                                    isShowingMainData: true,
+                                                  )),
                                                 ],
                                               ),
                                             ),
