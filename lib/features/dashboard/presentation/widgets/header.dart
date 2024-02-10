@@ -31,7 +31,7 @@ class Header extends StatelessWidget {
                     image: DecorationImage(
                         image: NetworkImage(
                           imageUrl ??
-                              'https://media.istockphoto.com/id/1397556857/vector/avatar-13.jpg?s=612x612&w=0&k=20&c=n4kOY_OEVVIMkiCNOnFbCxM0yQBiKVea-ylQG62JErI=',
+                              'https://media.licdn.com/dms/image/D4D03AQFyydSBjkvU-A/profile-displayphoto-shrink_200_200/0/1680703893216?e=1712793600&v=beta&t=ePzUj0xGTgMUyIFLh5nCHEPx325iqCngqKbPwuyVN-A',
                         ),
                         fit: BoxFit.cover)),
               ),
