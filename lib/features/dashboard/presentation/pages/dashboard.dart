@@ -194,6 +194,8 @@ class _DashboardState extends State<Dashboard> {
                                           bottom: 10),
                                       child: Row(
                                         children: [
+                                          //Row 3 container 1 for statistics
+
                                           Expanded(
                                             flex: 3,
                                             child: Container(
@@ -209,6 +211,8 @@ class _DashboardState extends State<Dashboard> {
                                           const SizedBox(
                                             width: 10,
                                           ),
+                                          // Row 3 for small container 2 for any data
+
                                           Expanded(
                                             child: Container(
                                               alignment: Alignment.center,
@@ -223,6 +227,8 @@ class _DashboardState extends State<Dashboard> {
                                           const SizedBox(
                                             width: 10,
                                           ),
+                                          // Row 3 for small container 3 for any data
+
                                           Expanded(
                                             child: Container(
                                               alignment: Alignment.center,
