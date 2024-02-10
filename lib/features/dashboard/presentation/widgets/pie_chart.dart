@@ -5,7 +5,7 @@ class PieChartSample1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PieChart(
-      swapAnimationDuration: Duration(milliseconds: 750),
+      swapAnimationDuration: const Duration(milliseconds: 750),
       PieChartData(
         sections: [
           PieChartSectionData(

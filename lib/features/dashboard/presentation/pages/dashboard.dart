@@ -14,6 +14,12 @@ class Dashboard extends StatefulWidget {
 }
 
 class _DashboardState extends State<Dashboard> {
+  final List<Map<String, dynamic>> contentMenu = [
+    {'title': 'Computer', 'icon': Icons.computer, 'subtitle': '20%'},
+    {'title': 'Car', 'icon': Icons.car_rental, 'subtitle': '20%'},
+    {'title': 'Telephone', 'icon': Icons.mobile_friendly, 'subtitle': '20%'},
+    {'title': 'Laptop', 'icon': Icons.laptop, 'subtitle': '20%'},
+  ];
   final List<TopCard> topCards = [
     const TopCard(
       iconColor: Colors.purpleAccent,
@@ -187,19 +193,19 @@ class _DashboardState extends State<Dashboard> {
                                                             Container(
                                                               width: 10,
                                                               height: 10,
-                                                              decoration: BoxDecoration(
+                                                              decoration: const BoxDecoration(
                                                                   shape: BoxShape
                                                                       .circle,
                                                                   color: Colors
                                                                       .orangeAccent),
                                                             ),
-                                                            SizedBox(
+                                                            const SizedBox(
                                                               width: 5,
                                                             ),
-                                                            Text('Female')
+                                                            const Text('Female')
                                                           ],
                                                         ),
-                                                        SizedBox(
+                                                        const SizedBox(
                                                           width: 15,
                                                         ),
                                                         Row(
@@ -207,16 +213,16 @@ class _DashboardState extends State<Dashboard> {
                                                             Container(
                                                               width: 10,
                                                               height: 10,
-                                                              decoration: BoxDecoration(
+                                                              decoration: const BoxDecoration(
                                                                   shape: BoxShape
                                                                       .circle,
                                                                   color: Colors
                                                                       .purpleAccent),
                                                             ),
-                                                            SizedBox(
+                                                            const SizedBox(
                                                               width: 5,
                                                             ),
-                                                            Text('Male')
+                                                            const Text('Male')
                                                           ],
                                                         )
                                                       ],
@@ -268,7 +274,90 @@ class _DashboardState extends State<Dashboard> {
                                                     BorderRadius.circular(12),
                                                 color: Colors.white,
                                               ),
-                                              child: const Text('Statistics'),
+                                              child: Column(
+                                                children: [
+                                                  const Padding(
+                                                    padding: EdgeInsets.only(
+                                                        top: 15.0),
+                                                    child: Text(
+                                                      'Markets Rates',
+                                                      style: TextStyle(
+                                                          fontSize: 20,
+                                                          fontWeight:
+                                                              FontWeight.w700),
+                                                    ),
+                                                  ),
+                                                  const Divider(),
+                                                  Expanded(
+                                                    child: ListView.builder(
+                                                      itemCount:
+                                                          contentMenu.length,
+                                                      itemBuilder:
+                                                          (context, i) {
+                                                        return Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .symmetric(
+                                                            vertical: 8,
+                                                          ),
+                                                          child: Material(
+                                                            child: ListTile(
+                                                              contentPadding:
+                                                                  const EdgeInsets
+                                                                      .symmetric(
+                                                                      horizontal:
+                                                                          10),
+                                                              onTap: () {},
+                                                              hoverColor: Colors
+                                                                  .grey[200],
+                                                              selectedTileColor:
+                                                                  Colors.blue,
+                                                              iconColor:
+                                                                  Colors.white,
+                                                              leading: Padding(
+                                                                padding: const EdgeInsets
+                                                                    .symmetric(
+                                                                    horizontal:
+                                                                        20),
+                                                                child: Icon(
+                                                                  contentMenu[i]
+                                                                      ['icon'],
+                                                                  color: Colors
+                                                                      .grey,
+                                                                ),
+                                                              ),
+                                                              title: Text(
+                                                                  contentMenu[i]
+                                                                      [
+                                                                      'title']),
+                                                              trailing: Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .only(
+                                                                        right:
+                                                                            20.0),
+                                                                child: Text(
+                                                                  contentMenu[i]
+                                                                      [
+                                                                      'subtitle'],
+                                                                  style: const TextStyle(
+                                                                      fontSize:
+                                                                          18,
+                                                                      color: Colors
+                                                                          .black,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .bold),
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        );
+                                                      },
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           const SizedBox(
