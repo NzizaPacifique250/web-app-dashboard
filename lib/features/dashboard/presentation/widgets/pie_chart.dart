@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-class PieChartSample1 extends StatelessWidget {
+class PieChartSample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PieChart(

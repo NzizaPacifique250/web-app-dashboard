@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:template/features/dashboard/presentation/widgets/pie_chart.dart';
 
+import '../widgets/bar_chart.dart';
 import '../widgets/header.dart';
 import '../widgets/top_card.dart';
 import '../widgets/menu_items.dart';
@@ -148,232 +149,10 @@ class _DashboardState extends State<Dashboard> {
                                                     BorderRadius.circular(12),
                                                 color: Colors.white,
                                               ),
-                                              child: Column(
+                                              child: const Column(
                                                 children: [
                                                   Expanded(
-                                                      child: Padding(
-                                                    padding:
-                                                        const EdgeInsets.only(
-                                                            top: 30),
-                                                    child: BarChart(
-                                                      BarChartData(
-                                                        gridData:
-                                                            const FlGridData(
-                                                                show: false),
-                                                        borderData:
-                                                            FlBorderData(
-                                                                show: false),
-                                                        titlesData: const FlTitlesData(
-                                                            show: true,
-                                                            topTitles: AxisTitles(
-                                                                sideTitles: SideTitles(
-                                                                    showTitles:
-                                                                        false)),
-                                                            leftTitles: AxisTitles(
-                                                                sideTitles: SideTitles(
-                                                                    showTitles:
-                                                                        false)),
-                                                            rightTitles: AxisTitles(
-                                                                sideTitles: SideTitles(
-                                                                    showTitles:
-                                                                        false))),
-                                                        maxY: 70,
-                                                        minY: 0,
-                                                        barGroups: [
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 10)
-                                                              ],
-                                                              x: 1),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 20)
-                                                              ],
-                                                              x: 2),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 30)
-                                                              ],
-                                                              x: 3),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 40)
-                                                              ],
-                                                              x: 4),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 50)
-                                                              ],
-                                                              x: 5),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 60)
-                                                              ],
-                                                              x: 6),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 40)
-                                                              ],
-                                                              x: 7),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 30)
-                                                              ],
-                                                              x: 8),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 20)
-                                                              ],
-                                                              x: 9),
-                                                          BarChartGroupData(
-                                                              barRods: [
-                                                                BarChartRodData(
-                                                                    color: Colors
-                                                                            .blue[
-                                                                        800],
-                                                                    width: 15,
-                                                                    backDrawRodData:
-                                                                        BackgroundBarChartRodData(
-                                                                      color: Colors
-                                                                              .blue[
-                                                                          200],
-                                                                      toY: 70,
-                                                                      show:
-                                                                          true,
-                                                                    ),
-                                                                    toY: 10)
-                                                              ],
-                                                              x: 10),
-                                                        ],
-                                                      ),
-                                                    ),
-                                                  )),
+                                                      child: BarChartSample()),
                                                 ],
                                               ),
                                             ),
@@ -407,7 +186,7 @@ class _DashboardState extends State<Dashboard> {
                                                   ),
                                                   const Divider(),
                                                   Expanded(
-                                                      child: PieChartSample1()),
+                                                      child: PieChartSample()),
                                                   Padding(
                                                     padding: const EdgeInsets
                                                         .symmetric(
