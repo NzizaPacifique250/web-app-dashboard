@@ -25,14 +25,14 @@ class _DashboardState extends State<Dashboard> {
   final List<TopCard> topCards = [
     const TopCard(
       iconColor: Colors.purpleAccent,
-      title: 'Game Pad',
+      title: 'Games',
       subtitle: 'Play now!!',
       mainIcon: Icons.gamepad,
       topIcon: Icons.more_horiz_sharp,
     ),
     const TopCard(
       iconColor: Colors.blueAccent,
-      title: 'Play Circle',
+      title: 'Play',
       subtitle: 'Start',
       mainIcon: Icons.play_circle,
     ),
@@ -149,9 +149,73 @@ class _DashboardState extends State<Dashboard> {
                                                     BorderRadius.circular(12),
                                                 color: Colors.white,
                                               ),
-                                              child: const Column(
+                                              child: Column(
                                                 children: [
-                                                  Expanded(
+                                                  Row(
+                                                    children: [
+                                                      const Padding(
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 15.0,
+                                                                left: 30),
+                                                        child: Text(
+                                                          'Statistics - Bar Chart',
+                                                          style: TextStyle(
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700),
+                                                        ),
+                                                      ),
+                                                      const Spacer(),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(
+                                                                top: 15.0,
+                                                                right: 30),
+                                                        child: Row(
+                                                          children: [
+                                                            const Text(
+                                                              'Show by ',
+                                                            ),
+                                                            DropdownButton(
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .keyboard_arrow_down_outlined),
+                                                                underline:
+                                                                    const SizedBox(),
+                                                                value: 1,
+                                                                items: const [
+                                                                  DropdownMenuItem(
+                                                                    value: 1,
+                                                                    child: Text(
+                                                                      'week',
+                                                                      style: TextStyle(
+                                                                          fontWeight:
+                                                                              FontWeight.w600),
+                                                                    ),
+                                                                  ),
+                                                                  DropdownMenuItem(
+                                                                    value: 2,
+                                                                    child: Text(
+                                                                        'month'),
+                                                                  ),
+                                                                  DropdownMenuItem(
+                                                                    value: 3,
+                                                                    child: Text(
+                                                                        'year'),
+                                                                  ),
+                                                                ],
+                                                                onChanged:
+                                                                    (value) {}),
+                                                          ],
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  const Divider(),
+                                                  const Expanded(
                                                       child: BarChartSample()),
                                                 ],
                                               ),
@@ -175,7 +239,8 @@ class _DashboardState extends State<Dashboard> {
                                                 children: [
                                                   const Padding(
                                                     padding: EdgeInsets.only(
-                                                        top: 15.0),
+                                                        top: 15.0,
+                                                        bottom: 15.0),
                                                     child: Text(
                                                       'Statistics - Pie Chart',
                                                       style: TextStyle(
@@ -264,7 +329,76 @@ class _DashboardState extends State<Dashboard> {
                                                     BorderRadius.circular(12),
                                                 color: Colors.white,
                                               ),
-                                              child: const Text('Statistics'),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      const Padding(
+                                                        padding:
+                                                            EdgeInsets.only(
+                                                                top: 15.0,
+                                                                left: 30),
+                                                        child: Text(
+                                                          'Statistics - Line Graph',
+                                                          style: TextStyle(
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w700),
+                                                        ),
+                                                      ),
+                                                      const Spacer(),
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                .only(
+                                                                top: 15.0,
+                                                                right: 30),
+                                                        child: Row(
+                                                          children: [
+                                                            const Text(
+                                                              'Show by ',
+                                                            ),
+                                                            DropdownButton(
+                                                                icon: const Icon(
+                                                                    Icons
+                                                                        .keyboard_arrow_down_outlined),
+                                                                underline:
+                                                                    const SizedBox(),
+                                                                value: 1,
+                                                                items: const [
+                                                                  DropdownMenuItem(
+                                                                    value: 1,
+                                                                    child: Text(
+                                                                      'week',
+                                                                      style: TextStyle(
+                                                                          fontWeight:
+                                                                              FontWeight.w600),
+                                                                    ),
+                                                                  ),
+                                                                  DropdownMenuItem(
+                                                                    value: 2,
+                                                                    child: Text(
+                                                                        'month'),
+                                                                  ),
+                                                                  DropdownMenuItem(
+                                                                    value: 3,
+                                                                    child: Text(
+                                                                        'year'),
+                                                                  ),
+                                                                ],
+                                                                onChanged:
+                                                                    (value) {}),
+                                                          ],
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                  const Divider(),
+                                                  const Expanded(
+                                                      child: BarChartSample()),
+                                                ],
+                                              ),
                                             ),
                                           ),
                                           const SizedBox(
@@ -284,7 +418,8 @@ class _DashboardState extends State<Dashboard> {
                                                 children: [
                                                   const Padding(
                                                     padding: EdgeInsets.only(
-                                                        top: 15.0),
+                                                        top: 15.0,
+                                                        bottom: 15.0),
                                                     child: Text(
                                                       'Markets Rates',
                                                       style: TextStyle(

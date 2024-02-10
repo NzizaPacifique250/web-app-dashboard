@@ -11,7 +11,7 @@ class PieChartSample extends StatelessWidget {
           PieChartSectionData(
             showTitle: false,
             radius: 10,
-            value: 200,
+            value: 80,
             color: Colors.purpleAccent,
           ),
           PieChartSectionData(

@@ -56,9 +56,9 @@ class TopCard extends StatelessWidget {
                             color: iconColor.withOpacity(0.1),
                             shape: BoxShape.circle),
                         child: Icon(
-                          Icons.people,
+                          mainIcon,
                           color: iconColor,
-                          size: 30,
+                          size: 35,
                         ),
                       ),
                       const SizedBox(
