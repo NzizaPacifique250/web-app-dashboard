@@ -63,7 +63,6 @@ class LineChartSample2 extends StatelessWidget {
   List<LineChartBarData> get lineBarsData1 => [
         lineChartBarData1_1,
         lineChartBarData1_2,
-        lineChartBarData1_3,
       ];
 
   LineTouchData get lineTouchData2 => const LineTouchData(
@@ -99,19 +98,19 @@ class LineChartSample2 extends StatelessWidget {
     String text;
     switch (value.toInt()) {
       case 1:
-        text = '1m';
+        text = '10k';
         break;
       case 2:
-        text = '2m';
+        text = '20k';
         break;
       case 3:
-        text = '3m';
+        text = '30k';
         break;
       case 4:
-        text = '5m';
+        text = '40k';
         break;
       case 5:
-        text = '6m';
+        text = '50k';
         break;
       default:
         return Container();
@@ -176,7 +175,7 @@ class LineChartSample2 extends StatelessWidget {
 
   LineChartBarData get lineChartBarData1_1 => LineChartBarData(
         isCurved: true,
-        color: Colors.green,
+        color: Colors.blue,
         barWidth: 8,
         isStrokeCapRound: true,
         dotData: const FlDotData(show: false),
@@ -212,26 +211,10 @@ class LineChartSample2 extends StatelessWidget {
         ],
       );
 
-  LineChartBarData get lineChartBarData1_3 => LineChartBarData(
-        isCurved: true,
-        color: Colors.cyan,
-        barWidth: 8,
-        isStrokeCapRound: true,
-        dotData: const FlDotData(show: false),
-        belowBarData: BarAreaData(show: false),
-        spots: const [
-          FlSpot(1, 2.8),
-          FlSpot(3, 1.9),
-          FlSpot(6, 3),
-          FlSpot(10, 1.3),
-          FlSpot(13, 2.5),
-        ],
-      );
-
   LineChartBarData get lineChartBarData2_1 => LineChartBarData(
         isCurved: true,
         curveSmoothness: 0,
-        color: Colors.green.withOpacity(0.5),
+        color: Colors.blue.withOpacity(0.5),
         barWidth: 4,
         isStrokeCapRound: true,
         dotData: const FlDotData(show: false),

@@ -9,11 +9,11 @@ class MenuItems extends StatefulWidget {
 
 class _MenuItemsState extends State<MenuItems> {
   final List<Map<String, dynamic>> menuItems = [
-    {'title': 'Home', 'icon': Icons.home},
-    {'title': 'Statistics', 'icon': Icons.bar_chart},
-    {'title': 'History', 'icon': Icons.history},
-    {'title': 'Transactions', 'icon': Icons.transcribe_sharp},
-    {'title': 'About Us', 'icon': Icons.info},
+    {'title': 'Overview', 'icon': Icons.dashboard, 'ontap': () {}},
+    {'title': 'Statistics', 'icon': Icons.bar_chart, 'ontap': () {}},
+    {'title': 'Top Gamers', 'icon': Icons.people, 'ontap': () {}},
+    {'title': 'Challenges', 'icon': Icons.emoji_events, 'ontap': () {}},
+    {'title': 'About Us', 'icon': Icons.info, 'ontap': () {}},
   ];
   final List<Map<String, dynamic>> moreMenuItems = [
     {'title': 'Settings', 'icon': Icons.settings},
@@ -35,7 +35,7 @@ class _MenuItemsState extends State<MenuItems> {
                 child: Material(
                   child: ListTile(
                     contentPadding: const EdgeInsets.symmetric(horizontal: 10),
-                    onTap: () {},
+                    onTap: menuItems[i]['ontap'],
                     hoverColor: Colors.grey[200],
                     selectedTileColor: Colors.blue,
                     iconColor: Colors.white,

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:template/features/dashboard/presentation/widgets/pie_chart.dart';
+import 'package:template/features/dashboard/presentation/widgets/social_media.dart';
 
 import '../widgets/bar_chart.dart';
 import '../widgets/header.dart';
@@ -17,44 +19,44 @@ class Dashboard extends StatefulWidget {
 
 class _DashboardState extends State<Dashboard> {
   final List<Map<String, dynamic>> contentMenu = [
-    {'title': 'Computer', 'icon': Icons.computer, 'subtitle': '20%'},
-    {'title': 'Car', 'icon': Icons.car_rental, 'subtitle': '20%'},
-    {'title': 'Telephone', 'icon': Icons.mobile_friendly, 'subtitle': '20%'},
-    {'title': 'Laptop', 'icon': Icons.laptop, 'subtitle': '20%'},
+    {'title': 'Computer', 'icon': Icons.computer, 'subtitle': '52%'},
+    {'title': 'VR', 'icon': Icons.vrpano, 'subtitle': '30%'},
+    {'title': 'Telephone', 'icon': Icons.mobile_friendly, 'subtitle': '80%'},
+    {'title': 'Laptop', 'icon': Icons.laptop, 'subtitle': '60%'},
   ];
   final List<TopCard> topCards = [
     const TopCard(
-      iconColor: Colors.purpleAccent,
-      title: 'Games',
-      subtitle: 'Play now!!',
-      mainIcon: Icons.gamepad,
+      iconColor: Color(0xff00a4e1),
+      title: '10,298',
+      subtitle: 'Mario Players',
+      mainIcon: Flags.rwanda,
       topIcon: Icons.more_horiz_sharp,
     ),
     const TopCard(
-      iconColor: Colors.blueAccent,
-      title: 'Play',
-      subtitle: 'Start',
-      mainIcon: Icons.play_circle,
+      iconColor: Color(0xff1fb53a),
+      title: '10,105',
+      subtitle: 'Mario Players',
+      mainIcon: Flags.tanzania,
     ),
     const TopCard(
-      iconColor: Colors.greenAccent,
-      title: 'Soccer',
-      subtitle: 'We gooo',
-      mainIcon: Icons.sports_soccer,
+      iconColor: Color(0xffbc0000),
+      title: '10,090',
+      subtitle: 'Mario Players',
+      mainIcon: Flags.kenya,
       topIcon: Icons.more_horiz_sharp,
     ),
     const TopCard(
-      iconColor: Colors.orangeAccent,
-      title: 'Dribbling',
-      subtitle: 'Shooot',
-      mainIcon: Icons.sports_basketball,
+      iconColor: Color(0xfffcdd00),
+      title: '10,000',
+      subtitle: 'Mario Players',
+      mainIcon: Flags.uganda,
       topIcon: Icons.more_horiz_sharp,
     ),
     const TopCard(
-      iconColor: Colors.cyanAccent,
-      title: 'Volleball',
-      subtitle: 'Game on!!',
-      mainIcon: Icons.sports_volleyball,
+      iconColor: Color(0xffc9072a),
+      title: '7,120',
+      subtitle: 'Mario Players',
+      mainIcon: Flags.burundi,
       topIcon: Icons.more_horiz_sharp,
     ),
   ];
@@ -159,7 +161,7 @@ class _DashboardState extends State<Dashboard> {
                                                                 top: 15.0,
                                                                 left: 30),
                                                         child: Text(
-                                                          'Statistics - Bar Chart',
+                                                          'Period Based Statistics - Bar Chart',
                                                           style: TextStyle(
                                                               fontSize: 20,
                                                               fontWeight:
@@ -190,7 +192,7 @@ class _DashboardState extends State<Dashboard> {
                                                                   DropdownMenuItem(
                                                                     value: 1,
                                                                     child: Text(
-                                                                      'week',
+                                                                      '2021',
                                                                       style: TextStyle(
                                                                           fontWeight:
                                                                               FontWeight.w600),
@@ -199,12 +201,12 @@ class _DashboardState extends State<Dashboard> {
                                                                   DropdownMenuItem(
                                                                     value: 2,
                                                                     child: Text(
-                                                                        'month'),
+                                                                        '2022'),
                                                                   ),
                                                                   DropdownMenuItem(
                                                                     value: 3,
                                                                     child: Text(
-                                                                        'year'),
+                                                                        '2023'),
                                                                   ),
                                                                 ],
                                                                 onChanged:
@@ -215,7 +217,7 @@ class _DashboardState extends State<Dashboard> {
                                                     ],
                                                   ),
                                                   const Divider(),
-                                                  Expanded(
+                                                  const Expanded(
                                                       child: BarChartSample()),
                                                 ],
                                               ),
@@ -339,7 +341,7 @@ class _DashboardState extends State<Dashboard> {
                                                                 top: 15.0,
                                                                 left: 30),
                                                         child: Text(
-                                                          'Statistics - Line Graph',
+                                                          'Gender Based Statistics - Line Graph',
                                                           style: TextStyle(
                                                               fontSize: 20,
                                                               fontWeight:
@@ -357,7 +359,7 @@ class _DashboardState extends State<Dashboard> {
                                                         child: Row(
                                                           children: [
                                                             const Text(
-                                                              'Show by ',
+                                                              'Show in ',
                                                             ),
                                                             DropdownButton(
                                                                 icon: const Icon(
@@ -370,7 +372,7 @@ class _DashboardState extends State<Dashboard> {
                                                                   DropdownMenuItem(
                                                                     value: 1,
                                                                     child: Text(
-                                                                      'week',
+                                                                      'rwanda',
                                                                       style: TextStyle(
                                                                           fontWeight:
                                                                               FontWeight.w600),
@@ -379,12 +381,12 @@ class _DashboardState extends State<Dashboard> {
                                                                   DropdownMenuItem(
                                                                     value: 2,
                                                                     child: Text(
-                                                                        'month'),
+                                                                        'tanzania'),
                                                                   ),
                                                                   DropdownMenuItem(
                                                                     value: 3,
                                                                     child: Text(
-                                                                        'year'),
+                                                                        'burundi'),
                                                                   ),
                                                                 ],
                                                                 onChanged:
@@ -395,9 +397,72 @@ class _DashboardState extends State<Dashboard> {
                                                     ],
                                                   ),
                                                   const Divider(),
-                                                  const Expanded(
-                                                      child: LineChartSample2(
-                                                    isShowingMainData: true,
+                                                  Expanded(
+                                                      child: Column(
+                                                    children: [
+                                                      const Expanded(
+                                                        flex: 4,
+                                                        child: LineChartSample2(
+                                                          isShowingMainData:
+                                                              true,
+                                                        ),
+                                                      ),
+                                                      Expanded(
+                                                        flex: 1,
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .symmetric(
+                                                                  horizontal:
+                                                                      60),
+                                                          child: Row(
+                                                            children: [
+                                                              Row(
+                                                                children: [
+                                                                  Container(
+                                                                    width: 25,
+                                                                    height: 10,
+                                                                    decoration: const BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.all(Radius.circular(
+                                                                                8)),
+                                                                        color: Colors
+                                                                            .pink),
+                                                                  ),
+                                                                  const SizedBox(
+                                                                    width: 5,
+                                                                  ),
+                                                                  const Text(
+                                                                      'Male'),
+                                                                ],
+                                                              ),
+                                                              const SizedBox(
+                                                                width: 26,
+                                                              ),
+                                                              Row(
+                                                                children: [
+                                                                  Container(
+                                                                    width: 25,
+                                                                    height: 10,
+                                                                    decoration: const BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.all(Radius.circular(
+                                                                                8)),
+                                                                        color: Colors
+                                                                            .blue),
+                                                                  ),
+                                                                  const SizedBox(
+                                                                    width: 5,
+                                                                  ),
+                                                                  const Text(
+                                                                      'Female'),
+                                                                ],
+                                                              )
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )
+                                                    ],
                                                   )),
                                                 ],
                                               ),

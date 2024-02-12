@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:icons_plus/icons_plus.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class TopCard extends StatelessWidget {
   final Color iconColor;
   final String title;
   final String subtitle;
-  final IconData mainIcon;
+  final String mainIcon;
   final IconData? topIcon;
 
   const TopCard(
@@ -52,13 +53,12 @@ class TopCard extends StatelessWidget {
                       Container(
                         width: 60,
                         height: 60,
+                        padding: EdgeInsets.all(12),
                         decoration: BoxDecoration(
                             color: iconColor.withOpacity(0.1),
                             shape: BoxShape.circle),
-                        child: Icon(
+                        child: Flag(
                           mainIcon,
-                          color: iconColor,
-                          size: 35,
                         ),
                       ),
                       const SizedBox(
