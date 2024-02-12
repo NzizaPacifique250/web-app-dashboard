@@ -34,4 +34,5 @@ Contributions are welcome! Whether it's adding new features, improving existing 
 This project is licensed under the [MIT License](LICENSE).
 
 ## UI/UX Design vs Final Ouput
+This is the comparison between the inspirational design and the output after writing the codes.
 ![UI/UX & Final Output](https://github.com/NzizaPacifique250/web-app-dashboard/blob/main/assets/screenshot/comparison_images.png)
